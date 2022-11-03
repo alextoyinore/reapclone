@@ -29,7 +29,7 @@ class _DashboardState extends State<Dashboard> {
             physics: BouncingScrollPhysics(),
             children: [
               SizedBox(
-                height: 260,
+                height: 280,
               ),
               SectionTitle(
                 title: 'Quick Actions',

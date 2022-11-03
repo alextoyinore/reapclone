@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -5,6 +6,7 @@ import 'package:reapclone/helpers/colors.dart';
 import 'package:reapclone/helpers/space.dart';
 import 'package:reapclone/helpers/style.dart';
 import 'package:reapclone/screens/activity_log.dart';
+import 'package:reapclone/screens/money_summary.dart';
 import 'package:reapclone/widgets/portfolio_list_item.dart';
 
 class Portfolio extends StatefulWidget {
@@ -24,10 +26,6 @@ class _PortfolioState extends State<Portfolio> {
         centerTitle: true,
         backgroundColor: RColor.white,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: RColor.black,
-        ),
         title: Text(
           'Portfolio',
           style: pageTitle,
@@ -46,8 +44,10 @@ class _PortfolioState extends State<Portfolio> {
                   title: 'Activity Log',
                   subtitle: 'Your money summary all in one place',
                   whenTapped: (() {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ActivityLog()));
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => ActivityLog()));
                   }),
                 ),
                 space20,
@@ -61,6 +61,12 @@ class _PortfolioState extends State<Portfolio> {
                   image: 'assets/images/money_summary.png',
                   title: 'Money Summary',
                   subtitle: 'See your savings overview',
+                  whenTapped: (() {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => MoneySummary()));
+                  }),
                 ),
               ],
             ),
