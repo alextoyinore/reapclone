@@ -339,6 +339,15 @@ class _WalletState extends State<Wallet> {
           ),
           Positioned(
             child: Container(
+              height: 140,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: RColor.white,
+              ),
+            ),
+          ),
+          Positioned(
+            child: Container(
               height: 80,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(

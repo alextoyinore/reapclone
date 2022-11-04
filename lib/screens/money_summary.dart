@@ -116,7 +116,7 @@ class _MoneySummaryState extends State<MoneySummary> {
                           children: [
                             Container(
                               height: 6,
-                              width: MediaQuery.of(context).size.width * .45,
+                              width: MediaQuery.of(context).size.width * .40,
                               decoration: BoxDecoration(
                                 color: RColor.blueLight.withOpacity(.5),
                                 borderRadius: BorderRadius.circular(10),
@@ -132,6 +132,7 @@ class _MoneySummaryState extends State<MoneySummary> {
                             ),
                           ],
                         ),
+                        horizontalspace10,
                         Text(
                           'Pro Saver',
                           style: TextStyle(
@@ -253,6 +254,7 @@ class _MoneySummaryState extends State<MoneySummary> {
                   topLabel: 'Credit',
                   percent: 70.25,
                 ),
+                horizontalspace10,
                 MoneyRateInfo(
                   topLabel: 'Debit',
                   percent: 24.25,
